@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.hiden_message_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hiden_message_content {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    p{
+        text-align: justify;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        span{
+            font-weight: normal;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            translate: 50px 100px;
+        }
+    }
+}
+
+
+.art_message {
+    position: fixed;
+    font-size: 12px;
+    line-height: 8px;
+    text-align: justify;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url(crush.jpg) no-repeat center;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(225, 225, 255, 0);
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px; 
+    background-color: #FFB0B0;
+    transform: rotate(-45deg);
+    margin: 50px;
+    z-index: -1;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 50px; 
+    height: 50px; 
+    background-color: #FFB0B0;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px; 
+    left: 0;
+}
+
+.heart::after {
+    left: 25px; 
+    top: 0;
+}
+
+
