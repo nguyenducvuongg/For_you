@@ -1,7 +1,7 @@
 const cursor = document.querySelector(".heart");
 function updateCursor(x, y) {
-    cursor.style.left = x - 100 + "px";
-    cursor.style.top = y - 100 + "px";
+    cursor.style.left = x - 145 + "px";
+    cursor.style.top = y - 145 + "px";
 }
 window.addEventListener("mousemove", function(e) {
     updateCursor(e.x, e.y);
