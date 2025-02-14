@@ -29,19 +29,20 @@ body {
     border-radius: 8px;
     font-size: 1.2em;
     line-height: 1.6;
-    p{
-        text-align: justify;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        span{
-            font-weight: normal;
-            font-style: italic;
-            font-family: Arial, Helvetica, sans-serif;
-            translate: 50px 100px;
-        }
-    }
 }
 
+.hiden_message_content p {
+    text-align: justify;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hiden_message_content p span {
+    font-weight: normal;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    translate: 50px 100px;
+}
 
 .art_message {
     position: fixed;
@@ -88,4 +89,60 @@ body {
     top: 0;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .hiden_message_container {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .hiden_message_content {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+    
+    .art_message {
+        font-size: 11px;
+        background-position: center;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .hiden_message_container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .hiden_message_content {
+        font-size: 1em;
+        padding: 10px;
+    }
+    
+    .art_message {
+        font-size: 10px;
+        background-size: contain;
+        background-position: top;
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .hiden_message_container {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .hiden_message_content {
+        font-size: 1em;
+        padding: 10px;
+    }
+    
+    .art_message {
+        font-size: 9px;
+        background-size: contain;
+        background-position: center;
+    }
+}
